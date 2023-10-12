@@ -29,7 +29,7 @@ if st.sidebar.button("Check null values"):
 
 if st.sidebar.button("Check the dataframe"):
     # Print the first few rows of the DataFrame to check if it is 
-    st.write(df.head(10))
+    st.write(df.sample(random_state=0).head(10))
 
 st.sidebar.write("lets select the hyperparameters for the models")
 selected_solver = st.sidebar.selectbox("Select the solver for the logistic regression model",("lbfgs","sag","newton-cg","lib-linear"))
