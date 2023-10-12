@@ -11,13 +11,13 @@ import seaborn as sns
 
 # Set page title and background color
 st.set_page_config(
-    page_title="Salih Ekicis ML Task",
+    page_title="Salih Ekici's ML Task",
     page_icon="✏️",
     layout="wide",
     initial_sidebar_state="expanded",
 )
 
-st.title("Salih Ekici2s ML task")
+st.title("Salih Ekici's ML task")
 st.sidebar.header("EDA")
 
 data = pd.read_excel("./Dry_Bean_Dataset.xlsx")
