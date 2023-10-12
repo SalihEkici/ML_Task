@@ -24,13 +24,14 @@ data = pd.read_excel("./Dry_Bean_Dataset.xlsx")
 
 df = pd.DataFrame(data)
 if st.sidebar.button("Check null values"):
-    print(df.isnull().values.any())
+    st.write(df.isnull().values.any())
+    st.write("Looks like we don't have any null values")
 
 if st.sidebar.button("Check the dataframe"):
     # Print the first few rows of the DataFrame to check if it is 
-    print(df.head(10))
+    st.write(df.head(10))
 
-st.write("lets select the hyperparameters for the models")
+st.sidebar.write("lets select the hyperparameters for the models")
 selected_solver = st.sidebar.selectbox("Select the solver for the logistic regression model",("lbfgs","sag","newton-cg","lib-linear"))
 selected_smoothing = st.sidebar.text_input("Enter the smooting value for the Gaussian model (recommended is either 0 or 1e-9)")
 
